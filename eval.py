@@ -80,7 +80,7 @@ label = torch.arange(args.way).repeat(args.query)
 label = label.type(torch.cuda.LongTensor)
 
 query_path, ref_path = "data/Corner/query_images", "data/Corner/reference_images"
-output_path = "data/Corner/outputs"
+output_path = "../data/Corner/outputs"
 
 query_images, r_imgs = get_data(query_path, ref_path)
 images_path = os.listdir(ref_path)
