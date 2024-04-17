@@ -80,7 +80,7 @@ label = torch.arange(args.way).repeat(args.query)
 label = label.type(torch.cuda.LongTensor)
 
 query_path, ref_path = "data/Corner/query_images", "data/Corner/reference_images"
-output_path = "../data/Corner/outputs"
+output_path = "../data/Corner/outputs_oldest"
 
 query_images, r_imgs = get_data(query_path, ref_path)
 images_path = os.listdir(ref_path)
@@ -128,7 +128,6 @@ with torch.no_grad():
         # print(probabilities.shape)
         top5_probabilities, top5_indices = torch.topk(probabilities, k=5)
         top5_indices = top5_indices.tolist()
-        print(top5_indices,top5_probabilities)
         # print(logits)
         # pred = torch.argmax(logits, dim=0)
         idx_out = len(os.listdir(output_path))
