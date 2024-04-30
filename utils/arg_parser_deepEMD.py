@@ -32,7 +32,7 @@ def parse_arguments(DATA_DIR='datasets/', MODEL_DIR= 'DeepEMD/deepemd_trained_mo
     parser.add_argument('-sfc_bs', type=int, default=4)
     # others
     parser.add_argument('-test_episode', type=int, default=5000)
-    parser.add_argument('-gpu', default='0,1')
+    parser.add_argument('-gpu', default='0')
     parser.add_argument('-data_dir', type=str, default=DATA_DIR)
     parser.add_argument('-model_dir', type=str, default=MODEL_DIR)
     parser.add_argument('-seed', type=int, default=1)
